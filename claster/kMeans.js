@@ -7,6 +7,7 @@ export function kMeans(k, points, maxIter=100)
         clusters = clusterization(points, centers)
 
         const newCenters = recenration(clusters);
+                   
         if (!isChanged(centers, newCenters))
         {
             break;

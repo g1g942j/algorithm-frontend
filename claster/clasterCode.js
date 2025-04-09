@@ -18,7 +18,7 @@ let points = [];
 let centers = [];
 let clusters = [];
 
-let i =0;
+let i = 0;
 function drawPoints() {
     pnt.clearRect(0, 0, field.width, field.height); 
     const draw = clusters.length > 0 ? clusters : points;
@@ -28,15 +28,14 @@ function drawPoints() {
         pnt.arc(point.x, point.y, 4, 0, Math.PI * 2);
         pnt.fill();
     });
-    
-    centers.forEach(center => {
-        pnt.fillStyle = '#000';
+
+    centers.forEach((center, c) => {
+        pnt.fillStyle = clusterColors[c];
         pnt.beginPath();
-        pnt.arc(center.x, center.y, 6, 0, Math.PI * 2);
+        pnt.arc(center.x, center.y, 7, 0, Math.PI * 2);
         pnt.fill();
     });
     
-
 }
 
 field.addEventListener('click', (event) => {
