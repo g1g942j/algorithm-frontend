@@ -69,7 +69,8 @@
     padding: 0 1rem;
   }  
 
-  .menu-button {
+  .menu-button, #clusterButton{
+    cursor:pointer;
     width: 120px;
     height: 50px;
     border: none;
@@ -90,4 +91,22 @@
   .menu-button:hover {
     transform: scale(0.9);
     background: #4285f499;
+  }
+  .cluster-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  #clusterCount {
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background: #112240;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
   }
